@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="/stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+	<script type="text/javascript">
+		$( document ).ready(function() {
+			var hostname = $.cookie("backend");			
+			console.log(hostname);
+			console.log(sessionStorage.getItem("token"));
+			
+			if(sessionStorage.getItem("token")===null){
+				window.location = 'login.html';
+			} else {
+				$.ajax({
+				  timeout: 30000,
+				  type: 'POST',
+				  dataType: 'json',				  
+				  url: 'http://'+hostname+':8090/todo-list/auth/check',
+				  contentType: 'application/json',
+				  headers: {
+					"Authorization": "Bearer " + sessionStorage.getItem("token")
+				  },				  
+				  success: function(data, textStatus, request){
+					  console.log("success");					  					  
+				  }
+				}).fail(function(jqXHR, textStatus, errorThrown) {
+				  console.log(errorThrown);
+				  //window.location = 'login.html';
+				});
+			}
+			
+		});
+	</script
+</head>
+<body>
+Here's what our Helloween service is saying to you:
+<div id="helloweenMessage"></div>
+</body>
+</html>

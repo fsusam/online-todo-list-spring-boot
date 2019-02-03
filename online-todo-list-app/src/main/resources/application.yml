@@ -1,0 +1,31 @@
+server:
+  port: 8090
+  servlet:
+    contextPath: /todo-list
+    session:
+      timeout: 1
+
+spring:
+  h2:
+    console:
+      enabled: true
+  data:
+    jpa:
+      repositories.enabled: true
+  jpa:
+    openInView: false
+    show_sql: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      ##hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+      hibernate.dialect: org.hibernate.dialect.H2Dialect
+      hibernate.jdbc.lob.non_contextual_creation: true
+  datasource:
+    ##url: jdbc:postgresql://localhost:5444/postgres
+    ##username: postgres
+    ##password: 1q2w3e4r
+    url: jdbc:h2:mem:security_permission;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
