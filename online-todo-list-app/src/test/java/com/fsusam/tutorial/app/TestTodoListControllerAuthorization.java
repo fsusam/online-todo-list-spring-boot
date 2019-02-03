@@ -20,7 +20,7 @@ import com.fsusam.tutorial.security.AuthenticationRequest;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = StartApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TestTodoListAuthorizationController {
+public class TestTodoListControllerAuthorization {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AuthController.class);
 

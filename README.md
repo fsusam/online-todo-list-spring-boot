@@ -1,6 +1,6 @@
 # TODO List with Spring Boot
 create simple TODO list task and store database (in memory or RDBMS)
-support multi users
+support multi users and java Web Token(JWT) authentication
 
 ## Prerequisites
 - Apache Maven 3.5.4 or above
