@@ -14,6 +14,9 @@
     <packaging>jar</packaging>
     <name>[${project.parent.artifactId}] Controller module</name>
 
+    <properties>
+        <version.modelmapper-spring>2.3.0</version.modelmapper-spring>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>com.fsusam.tutorial</groupId>
@@ -29,7 +32,7 @@
         <dependency>
             <groupId>org.modelmapper.extensions</groupId>
             <artifactId>modelmapper-spring</artifactId>
-            <version>2.3.0</version>
+            <version>${version.modelmapper-spring}</version>
         </dependency>
     </dependencies>
 </project>
