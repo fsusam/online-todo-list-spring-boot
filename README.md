@@ -27,7 +27,7 @@ Run the backend
 mvn clean install spring-boot:run
 ```
 
-Run the frontend under nline-todo-list-web folder
+Run the frontend (go to online-todo-list-web folder which is under parent project)
 ```
 npm install
 npm start
