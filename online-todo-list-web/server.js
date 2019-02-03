@@ -21,5 +21,3 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
-console.log(process.env.NODE_ENV);
-console.log(hostname);
