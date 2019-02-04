@@ -39,10 +39,10 @@ Frontend Link : http://localhost:8080
 Sample Users
 ```
 username : user1@example.com
-IBAN : user1234
+password : user1234
 ---------------------------
 username : user2@example.com
-IBAN : user1234
+password : user1234
 ``` 
 
 ## Run with Docker
